@@ -5,3 +5,7 @@ from flask import render_template, redirect, session, request
 @app.route('/')
 def index():
     return render_template('/index.html')
+
+@app.route("/msg/sent")
+def msg_sent():
+    return render_template("/pages/msg_sent.html")

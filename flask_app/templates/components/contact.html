@@ -1,11 +1,12 @@
 <section id="contact" class="bg-secondaryLight dark:bg-secondaryDark dark:text-primaryDarkText">
     <div class="container px-4 py-16 mx-auto">
       <h2 class="text-3xl font-bold text-center text-primaryDark dark:text-white mb-8">Contact Us</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-        <div>
+      <div class="flex flex-col md:flex-row gap-12">
+        <div class="md:w-2/3">
           <h3 class="text-xl font-bold text-primaryDark dark:text-white mb-4">Get in touch</h3>
           <p class="text-secondaryDark dark:text-primaryDarkText mb-4">Fill out the form below to send us a message.</p>
-          <form action="#" method="post" class="grid grid-cols-1 gap-4">
+          <form action="https://formsubmit.io/send/47a85321-0c02-4b2a-86d8-9599870cbd7b" method="post" class="grid grid-cols-1 gap-4">
+            <input name="_redirect" type="hidden" id="name" value="tyler.thibault@github.io/pixeltek">
             <div>
               <label for="name" class="sr-only">Name</label>
               <input type="text" id="name" name="name" placeholder="Name" class="w-full px-4 py-2 border border-gray-300 rounded-md">
@@ -24,11 +25,7 @@
           </form>
         </div>
         <div>
-          <h3 class="text-xl font-bold text-primaryDark dark:text-white mb-4">Visit us</h3>
-          <p class="text-secondaryDark dark:text-primaryDarkText mb-4">Come to our office to talk with our team and learn more about our services.</p>
-          <p class="mb-2"><i class="fas fa-map-marker-alt mr-2"></i>123 Main Street, Suite 101</p>
-          <p class="mb-2"><i class="fas fa-phone-alt mr-2"></i>(123) 456-7890</p>
-          <p><i class="fas fa-envelope mr-2"></i>info@pixeltrek.com</p>
+          <img src="{{ url_for('static', filename='img/svg/mail_male.svg') }}" alt="email image">
         </div>
       </div>
     </div>

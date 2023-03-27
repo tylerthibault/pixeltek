@@ -1,5 +1,16 @@
 <style type="text/tailwindcss">
     @layer utilities {
-      
+      /* button */
+      button, .btn {
+        @apply hover:bg-opacity-75 text-black font-bold py-3 px-8 transition duration-300 ease-in-out mb-2 border rounded-xl;
+      }
+
+      .pill {
+        @apply rounded-full;
+      }
+
+      .btn-accent {
+        @apply bg-accent2 border-none;
+      }
     }
   </style>
