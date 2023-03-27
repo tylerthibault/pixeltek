@@ -1,0 +1,38 @@
+{% set all_projects = [
+{
+"title": "Baked Blessings",
+"description": "<p>As the creator of the website, I am proud to have built a platform for my wife's passion for baking. Using my knowledge of Python with Flask and a MySQL database, I have created a website that showcases her love for using Sourdough starter as the key ingredient in her homemade baked goods. With her busy schedule as a full-time wife and homeschool mom, she understands the need for homemade baked goods and the joy they bring to families. Through her little side hustle, she is able to provide her community with homemade baked goods that are both delicious and healthy. The use of Sourdough starter allows her to bake with wheat flour, while still providing gluten-intolerant individuals with baked goods they can enjoy without worry. It brings me joy to see her passion and talent come to life on this website, and I am excited to see where this little side hustle takes her in the future.</p>",
+"link": "#",
+"img": "https://i.ibb.co/R9WPpPp/Screenshot-20221228-172428-Gallery.jpg",
+},
+{
+"title": "Okandogs",
+"description": "<p>As a night job, I work a couple of times a week at a local business called Okandogs . While there, I noticed that their website was outdated and lacked the modern features that could help improve their online presence. I thought that building them a mock website would be a great way to showcase my skills and potentially help their business. So, in my free time, I created a website for them with all the latest features and design elements. However, after presenting it to the business owners, they decided not to use it, which was disappointing. Nonetheless, I am proud of the effort and time that I put into the project, and it was a great opportunity to practice my web development skills.</p>
+
+<p>Okandogs, a non-profit organization located in Cashmere, Washington, was established by Jan and Tom Short in 2014. Their mission is to provide medical care, spay/neuter services, and adoptions for dogs in need across the state, with a commitment to achieving a 100% adoption rate and zero euthanasia/fatality rate. The shelter has taken in and rescued hundreds of dogs, earning a positive reputation within the local community. Last year, Okandogs took in 801 dogs. One of the organization's success stories is Tucker, a four-year-old Labrador-Retriever mix who was surrendered by his owner earlier this year. Okandogs provided him with medical care, and just a few months later, Tucker was adopted by Major League Baseball's Seattle Mariners franchise as its clubhouse pet, a heartwarming example of Okandogs' dedication to giving dogs a second chance at life and finding them loving forever homes.</p>
+",
+"link": "#",
+"img": "https://static.wixstatic.com/media/d13d16_f81a0572f6eb4fceae458210b49510ea~mv2.jpg/v1/crop/x_1167,y_198,w_7466,h_3865/fill/w_881,h_456,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/20221021_0020%20BVH_JPG.jpg",
+},
+] %}
+
+<section id="portfolio" class="py-20 px-10">
+  <div class="container mx-auto">
+    <h2 class="text-4xl font-bold mb-10 text-center">Portfolio</h2>
+    <div class="flex flex-wrap justify-center gap-10">
+    {% for project in all_projects %}
+      <div class="md:w-1/3 lg:w-1/4 bg-gray-100 dark:bg-gray-700 text-black dark:text-white rounded-lg shadow-md overflow-hidden invisible animate-in"
+        animation="animate__swing">
+        <img src="{{ project.img if project.img != '' else 'https://via.placeholder.com/500x300' }}" alt="Project Image" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-bold mb-2">{{ project.title }}</h3>
+          <p class="mb-4 dark:text-primaryDarkText">{{ project.description | truncate(100) | safe }}</p>
+          <a href="{{ project.link }}"
+            class="text-primaryLight dark:text-accent2 font-bold hover:text-accent1 dark:hover:text-accent2">View
+            Project</a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

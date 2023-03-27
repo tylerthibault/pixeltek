@@ -1,0 +1,30 @@
+{% set all_services = [
+  {
+    "title": "Static Web Design",
+    "description": "We specialize in designing modern and professional websites that are tailored to your business needs.",
+  },
+  {
+    "title": "Web Application",
+    "description": "We specialize in designing modern and professional web applications that are tailored to your business needs.",
+  },
+  {
+    "title": "Search Engine Optimization",
+    "description": "We can help you improve your search engine rankings and increase your online visibility with our SEO services.",
+  },
+] %}
+
+
+<section id="services" class="bg-white dark:bg-primaryDark dark:text-primaryDarkText py-10">
+  <div class="mx-auto px-4">
+    <h2 class="text-center text-3xl font-bold mb-10 dark:text-white">Our Services</h2>
+    <div class="flex flex-wrap justify-center">
+      {% for service in all_services %}
+      <div class="w-full md:w-1/3 p-6 animate-in invisible animate__delay-{{ loop.index0 }}s" animation="animate__fadeInUp">
+        <h3 class="text-xl font-bold mb-4 dark:text-white">{{ service.title }}</h3>
+        <p class="text-secondary leading-loose mb-6">{{ service.description }}</p>
+        <a href="#" class="btn-primary dark:text-accent2">Learn More</a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
