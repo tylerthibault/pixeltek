@@ -40,31 +40,46 @@
 </script>
     <style type="text/tailwindcss">
     @layer utilities {
-      
+      /* button */
+      button, .btn {
+        @apply hover:bg-opacity-75 text-black font-bold py-3 px-8 transition duration-300 ease-in-out mb-2 border rounded-xl;
+      }
+
+      .pill {
+        @apply rounded-full;
+      }
+
+      .btn-accent {
+        @apply bg-accent2 border-none;
+      }
     }
   </style>
 
     
-<link rel="stylesheet" href="./static/css/style.css">
+<link rel="stylesheet" href="/static/css/style.css">
 
 
     <title>PixelTek</title>
 </head>
 
-<body class="bg-compLight1">
+<body>
     
 
 <section class="flex flex-col items-center justify-center min-h-screen bg-primaryLight dark:bg-primaryDark">
-    <div class="container flex flex-col items-center justify-center text-center">
-      <h1 class="text-4xl font-bold text-secondaryLight dark:text-compLight2 mb-4 animate-in invisible" animation="animate__zoomInDown">Welcome to <span class="dark:text-white">Pixel</span><span class="text-accent1">Tek</span></h1>
-      <div class="animate-in animate__delay-1s" animation="animate__fadeIn">
-        <p class="text-xl text-secondaryLight dark:text-primaryDarkText mb-8">We turn your ideas into digital reality</p>
-        <a href="#" class="bg-accent2 hover:bg-opacity-75 text-black font-bold py-3 px-8 rounded-full transition duration-300 ease-in-out mb-2">Get Started</a>
-        <a href="#" class="bg-transparent hover:bg-opacity-25 text-secondaryLight dark:text-primaryDarkText font-bold py-3 px-8 rounded-full transition duration-300 ease-in-out">Learn More</a>
-      </div>
+  <img class="w-4/5 md:w-1/6 animate-in invisible" animation="animate__rotateInDownLeft" src="/static/img/svg/design.svg" alt="">
+  <div class="container flex flex-col items-center justify-center text-center">
+    <h1 class="text-4xl font-bold text-secondaryLight dark:text-compLight2 mb-4 animate-in invisible"
+      animation="animate__zoomInDown">Welcome to <span class="dark:text-white">Pixel</span><span class="text-accent1">Tek</span></h1>
+    <div class="animate-in invisible animate__delay-1s" animation="animate__fadeIn">
+      <p class="text-xl text-secondaryLight dark:text-primaryDarkText mb-8">We turn your ideas into digital reality</p>
+      <a href="#contact"
+        class="btn btn-accent pill">Contact</a>
+      <a href="#about"
+        class="bg-transparent hover:bg-opacity-25 text-secondaryLight dark:text-primaryDarkText font-bold py-3 px-8 rounded-full transition duration-300 ease-in-out">Learn
+        More</a>
     </div>
-  </section>
-  
+  </div>
+</section>
 <nav class="bg-white dark:bg-black w-full border-b-4 border-black sticky top-0 z-10">
     <div class="mx-auto px-4">
         <div class="flex justify-between items-center py-4">
@@ -274,11 +289,12 @@
 <section id="contact" class="bg-secondaryLight dark:bg-secondaryDark dark:text-primaryDarkText">
     <div class="container px-4 py-16 mx-auto">
       <h2 class="text-3xl font-bold text-center text-primaryDark dark:text-white mb-8">Contact Us</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-        <div>
+      <div class="flex flex-col md:flex-row gap-12">
+        <div class="md:w-2/3">
           <h3 class="text-xl font-bold text-primaryDark dark:text-white mb-4">Get in touch</h3>
           <p class="text-secondaryDark dark:text-primaryDarkText mb-4">Fill out the form below to send us a message.</p>
-          <form action="#" method="post" class="grid grid-cols-1 gap-4">
+          <form action="https://formsubmit.io/send/47a85321-0c02-4b2a-86d8-9599870cbd7b" method="post" class="grid grid-cols-1 gap-4">
+            <input name="_redirect" type="hidden" id="name" value="tyler.thibault@github.io/pixeltek">
             <div>
               <label for="name" class="sr-only">Name</label>
               <input type="text" id="name" name="name" placeholder="Name" class="w-full px-4 py-2 border border-gray-300 rounded-md">
@@ -297,11 +313,7 @@
           </form>
         </div>
         <div>
-          <h3 class="text-xl font-bold text-primaryDark dark:text-white mb-4">Visit us</h3>
-          <p class="text-secondaryDark dark:text-primaryDarkText mb-4">Come to our office to talk with our team and learn more about our services.</p>
-          <p class="mb-2"><i class="fas fa-map-marker-alt mr-2"></i>123 Main Street, Suite 101</p>
-          <p class="mb-2"><i class="fas fa-phone-alt mr-2"></i>(123) 456-7890</p>
-          <p><i class="fas fa-envelope mr-2"></i>info@pixeltrek.com</p>
+          <img src="/static/img/svg/mail_male.svg" alt="email image">
         </div>
       </div>
     </div>
@@ -359,9 +371,9 @@
 
 
 
-    <script src="./static/js/darkmode.js"></script>
+    <script src="/static/js/darkmode.js"></script>
     
-<script src="./static/js/script.js"></script>
+<script src="/static/js/script.js"></script>
 
 </body>
 
