@@ -1,15 +1,22 @@
-<section class="flex flex-col items-center justify-center min-h-screen bg-primaryLight dark:bg-primaryDark">
-  <img class="w-4/5 md:w-1/6 animate-in invisible" animation="animate__rotateInDownLeft" src="{{ url_for('static', filename='img/svg/design.svg') }}" alt="">
-  <div class="container flex flex-col items-center justify-center text-center">
-    <h1 class="text-4xl font-bold text-secondaryLight dark:text-compLight2 mb-4 animate-in invisible"
-      animation="animate__zoomInDown">Welcome to {% include 'components/pixeltek.html' %}</h1>
-    <div class="animate-in invisible animate__delay-1s" animation="animate__fadeIn">
-      <p class="text-xl text-secondaryLight dark:text-primaryDarkText mb-8">We turn your ideas into digital reality</p>
-      <a href="#contact"
-        class="btn btn-accent pill">Contact</a>
-      <a href="#about"
-        class="bg-transparent hover:bg-opacity-25 text-secondaryLight dark:text-primaryDarkText font-bold py-3 px-8 rounded-full transition duration-300 ease-in-out">Learn
-        More</a>
+<section class="h-screen bg-primaryLight dark:bg-primaryDark">
+  <div class="flex flex-col items-center justify-center gap-3 h-full">
+    <img class="w-4/5 md:w-1/6 animate-in invisible" animation="animate__rotateInDownLeft"
+      src="{{ url_for('static', filename='img/svg/design.svg') }}" alt="">
+    <div class="container flex flex-col items-center justify-center text-center">
+      <h1 class="text-7xl font-bold text-secondaryLight dark:text-compLight2 mb-4 animate-in invisible"
+        animation="animate__zoomInDown">Welcome to {% include 'components/pixeltek.html' %}</h1>
+      <div class="animate-in invisible animate__delay-1s text-secondaryLight" animation="animate__fadeIn">
+        <p class="text-2xl text-secondaryLight dark:text-primaryDarkText mb-8">We turn your ideas into digital reality</p>
+        <a href="#contact" class="btn btn-accent pill text-lg">Contact</a>
+        <a href="#about"
+          class="bg-transparent hover:bg-opacity-25 text-secondaryLight dark:text-primaryDarkText font-bold py-3 px-8 rounded-full transition duration-300 ease-in-out text-lg">Learn
+          More</a>
+      </div>
+    </div>
+    <hr class="w-[10rem] mt-7 border-2 border-compLight2">
+    <div class="animate-in invisible animate__delay-1s text-center w-fit p-1 text-secondaryLight text flex gap-1" animation="animate__fadeIn">
+      <p><span>{% include 'components/pixeltek.html' %}</span> is a</p>
+      <p class="font-font2 font-bold uppercase">Tbo Company</p>
     </div>
   </div>
 </section>

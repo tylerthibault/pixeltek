@@ -6,5 +6,5 @@ freezer = Freezer(app)
 
 # keep this at the bottom of this file!!
 if __name__=="__main__":	 
-    freezer.freeze()
+    # freezer.freeze()
     app.run(debug=True)	

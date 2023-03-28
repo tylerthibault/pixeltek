@@ -8,6 +8,14 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="./static/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Raleway:wght@200;400;800&display=swap" rel="stylesheet">
+
+
     <script src="https://kit.fontawesome.com/4963ddc73f.js" crossorigin="anonymous"></script>
     <script>
     tailwind.config = {
@@ -32,6 +40,10 @@
                     compDark2: '#0582ca',
                     primaryDarkText: '#fff',
                     secondaryDarkText: '#00a6fb',
+                },
+                fontFamily: {
+                    font1: 'Delicious Handrawn',
+                    font2: 'Raleway',
                 }
             }
         }
@@ -64,18 +76,25 @@
 <body>
     
 
-<section class="flex flex-col items-center justify-center min-h-screen bg-primaryLight dark:bg-primaryDark">
-  <img class="w-4/5 md:w-1/6 animate-in invisible" animation="animate__rotateInDownLeft" src="./static/img/svg/design.svg" alt="">
-  <div class="container flex flex-col items-center justify-center text-center">
-    <h1 class="text-4xl font-bold text-secondaryLight dark:text-compLight2 mb-4 animate-in invisible"
-      animation="animate__zoomInDown">Welcome to <span class="dark:text-white">Pixel</span><span class="text-accent1">Tek</span></h1>
-    <div class="animate-in invisible animate__delay-1s" animation="animate__fadeIn">
-      <p class="text-xl text-secondaryLight dark:text-primaryDarkText mb-8">We turn your ideas into digital reality</p>
-      <a href="#contact"
-        class="btn btn-accent pill">Contact</a>
-      <a href="#about"
-        class="bg-transparent hover:bg-opacity-25 text-secondaryLight dark:text-primaryDarkText font-bold py-3 px-8 rounded-full transition duration-300 ease-in-out">Learn
-        More</a>
+<section class="h-screen bg-primaryLight dark:bg-primaryDark">
+  <div class="flex flex-col items-center justify-center gap-3 h-full">
+    <img class="w-4/5 md:w-1/6 animate-in invisible" animation="animate__rotateInDownLeft"
+      src="./static/img/svg/design.svg" alt="">
+    <div class="container flex flex-col items-center justify-center text-center">
+      <h1 class="text-7xl font-bold text-secondaryLight dark:text-compLight2 mb-4 animate-in invisible"
+        animation="animate__zoomInDown">Welcome to <span class="font-bold"><span class="dark:text-white">Pixel</span><span class="text-accent1">Tek</span></span></h1>
+      <div class="animate-in invisible animate__delay-1s text-secondaryLight" animation="animate__fadeIn">
+        <p class="text-2xl text-secondaryLight dark:text-primaryDarkText mb-8">We turn your ideas into digital reality</p>
+        <a href="#contact" class="btn btn-accent pill text-lg">Contact</a>
+        <a href="#about"
+          class="bg-transparent hover:bg-opacity-25 text-secondaryLight dark:text-primaryDarkText font-bold py-3 px-8 rounded-full transition duration-300 ease-in-out text-lg">Learn
+          More</a>
+      </div>
+    </div>
+    <hr class="w-[10rem] mt-7 border-2 border-compLight2">
+    <div class="animate-in invisible animate__delay-1s text-center w-fit p-1 text-secondaryLight text flex gap-1" animation="animate__fadeIn">
+      <p><span><span class="font-bold"><span class="dark:text-white">Pixel</span><span class="text-accent1">Tek</span></span></span> is a</p>
+      <p class="font-font2 font-bold uppercase">Tbo Company</p>
     </div>
   </div>
 </section>
@@ -83,7 +102,7 @@
     <div class="mx-auto px-4">
         <div class="flex justify-between items-center py-4">
             <a class="text-primaryLight dark:text-white font-bold text-lg animate-in invisible"
-                animation="animate__backInLeft" href="#"><span class="dark:text-white">Pixel</span><span class="text-accent1">Tek</span></a>
+                animation="animate__backInLeft" href="#"><span class="font-bold"><span class="dark:text-white">Pixel</span><span class="text-accent1">Tek</span></span></a>
             <button
                 class="lg:hidden flex items-center px-3 py-2 border rounded text-primaryLight dark:text-primaryDark border-primaryLight dark:border-primaryDark hover:text-accent1 hover:border-accent1 hover:bg-primaryLight dark:hover:bg-primaryDark focus:outline-none focus:ring-2 focus:ring-accent1"
                 id="menu-toggle" aria-label="Open main menu">
@@ -93,9 +112,6 @@
                 </svg>
             </button>
             <ul class="hidden lg:flex lg:items-center lg:gap-8 lg:w-auto" id="menu">
-                <li>
-                    <a class="text-black dark:text-primaryDarkText hover:text-accent1" href="/pixeltek/sent.html">Sent</a>
-                </li>
                 <li>
                     <a class="text-black dark:text-primaryDarkText hover:text-accent1" href="#about">About</a>
                 </li>
@@ -146,9 +162,9 @@
 
 
 
-<section id="services" class="bg-white dark:bg-primaryDark dark:text-primaryDarkText py-10">
+<section id="services" class="bg-compLight2 dark:bg-primaryDark text-white dark:text-compDark2 py-10">
   <div class="mx-auto px-4">
-    <h2 class="text-center text-3xl font-bold mb-10 dark:text-white">Our Services</h2>
+    <h2 class="text-center text-3xl font-bold mb-10">Our Services</h2>
     <div class="flex flex-wrap justify-center">
       
       <div class="w-full md:w-1/3 p-6 animate-in invisible animate__delay-0s" animation="animate__fadeInUp">
@@ -174,7 +190,7 @@
 </section>
 
 
-<section id="pricing" class="bg-secondaryLight dark:bg-secondaryDark dark:text-primaryDarkText">
+<section id="pricing" class="bg-secondaryLight dark:bg-compDark2 dark:text-primaryDarkText">
     <div class="container mx-auto py-16">
         <h2 class="text-3xl font-bold text-center mb-8 dark:text-white">Our Pricing</h2>
         <div class="flex justify-center flex-wrap gap-3">
@@ -256,7 +272,7 @@
 </section>
 
 
-<section id="portfolio" class="py-20 px-10">
+<section id="portfolio" class="py-20 px-10 bg-white dark:bg-primaryDark dark:text-compDark2">
   <div class="container mx-auto">
     <h2 class="text-4xl font-bold mb-10 text-center">Portfolio</h2>
     <div class="flex flex-wrap justify-center gap-10">
@@ -288,34 +304,34 @@
     </div>
   </div>
 </section>
-<section id="team" class="bg-primaryLight dark:bg-primaryDark py-16">
+<section id="team" class="bg-secondaryLight dark:bg-secondaryDark py-16">
     <div>
         <h2 class="text-5xl font-bold text-center text-secondaryLight dark:text-white mb-8">Meet Our Team</h2>
-        <div class="flex flex-col gap-3">
+        <div class="flex flex-col xl:mx-[20rem] 2xl:mx-[30rem] gap-3">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
                 <div class="bg-secondaryLight shadow shadow-black rounded-lg border border-black animate-in invisible" animation="animate__fadeInLeft">
-                    <img class="" src="./static/img/man1.png" alt="man">
+                    <img class="object-cover w-full h-full" src="./static/img/man1.png" alt="man">
                 </div>
-                <div class="h-full flex flex-col justify-center items-center shadow shadow-black rounded-lg border border-black text-secondaryLightText bg-compLight2 p-10 gap-3 animate-in invisible animate__delay-1s" animation="animate__fadeInRight">
+                <div class="h-full flex flex-col justify-center items-center shadow shadow-black rounded-lg border border-black text-secondaryLightText bg-compLight2 dark:bg-compDark2 p-10 gap-3 animate-in invisible animate__delay-1s" animation="animate__fadeInRight">
                     <p class="text-4xl font-bold">John Smith</p>
                     <p class="text-2xl">Lead Web Developer</p>
                     <p class="text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. At a maxime illum commodi, perspiciatis delectus consectetur aliquid assumenda sequi quasi earum cum cumque alias nesciunt?</p>
                 </div>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-                <div class="order-last md:order-first h-full flex flex-col justify-center items-center shadow shadow-black rounded-lg border border-black text-secondaryLightText p-10 bg-compLight2 gap-3 animate-in invisible animate__delay-1s" animation="animate__fadeInLeft">
+                <div class="order-last md:order-first h-full flex flex-col justify-center items-center shadow shadow-black rounded-lg border border-black text-secondaryLightText p-10 bg-compLight2 dark:bg-compDark2 gap-3 animate-in invisible animate__delay-1s" animation="animate__fadeInLeft">
                     <p class="text-4xl font-bold">Jane Doe</p>
                     <p class="text-2xl">Web Design Consultant</p>
                     <p class="text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. At a maxime illum commodi, perspiciatis delectus consectetur aliquid assumenda sequi quasi earum cum cumque alias nesciunt?</p>
                 </div>
                 <div class="order-first md:order-last bg-secondaryLight shadow shadow-black rounded-lg border border-black animate-in invisible" animation="animate__fadeInRight">
-                    <img class="" src="./static/img/woman1.png" alt="man">
+                    <img class="object-cover w-full h-full" src="./static/img/woman1.png" alt="man">
                 </div>
             </div>
         </div>
     </div>
 </section>
-<section id="contact" class="bg-secondaryLight dark:bg-secondaryDark dark:text-primaryDarkText">
+<section id="contact" class="bg-white dark:bg-compDark2 dark:text-primaryDarkText">
     <div class="container px-4 py-16 mx-auto">
       <h2 class="text-3xl font-bold text-center text-primaryDark dark:text-white mb-8">Contact Us</h2>
       <div class="flex flex-col md:flex-row gap-12">
@@ -350,49 +366,31 @@
   
 <footer class="bg-primaryLight dark:bg-primaryDark py-8">
     <div class="container mx-auto px-4">
-      <div class="flex flex-wrap">
+      <div class="flex flex-wrap justify-between">
         <div class="w-full lg:w-1/4 mb-8 lg:mb-0">
           <h4 class="text-white font-bold mb-4">PixelTek</h4>
           <p class="text-secondaryLight leading-loose">
             We are a freelance web development company that specializes in creating beautiful and functional websites for small to medium sized businesses.
           </p>
         </div>
-        <div class="w-full lg:w-1/4 mb-8 lg:mb-0">
-          <h4 class="text-white font-bold mb-4">Links</h4>
-          <ul class="list-none">
-            <li class="mb-2"><a href="#" class="text-secondaryLight hover:text-accent1">Home</a></li>
-            <li class="mb-2"><a href="#" class="text-secondaryLight hover:text-accent1">About</a></li>
-            <li class="mb-2"><a href="#" class="text-secondaryLight hover:text-accent1">Portfolio</a></li>
-            <li class="mb-2"><a href="#" class="text-secondaryLight hover:text-accent1">Services</a></li>
-            <li class="mb-2"><a href="#" class="text-secondaryLight hover:text-accent1">Pricing</a></li>
-            <li class="mb-2"><a href="#" class="text-secondaryLight hover:text-accent1">Contact</a></li>
-          </ul>
-        </div>
-        <div class="w-full lg:w-1/4 mb-8 lg:mb-0">
+        <div class="flex flex-col items-center w-full lg:w-1/4 mb-8 lg:mb-0">
           <h4 class="text-white font-bold mb-4">Contact Us</h4>
-          <p class="text-secondaryLight mb-2">123 Main Street</p>
-          <p class="text-secondaryLight mb-2">Suite 100</p>
-          <p class="text-secondaryLight mb-2">Anytown, USA 12345</p>
-          <p class="text-secondaryLight mb-2">info@pixelek.com</p>
+          <a href="mailto:pixeltek@pm.me" class="text-secondaryLight mb-2">pixeltek@pm.me</a>
           <p class="text-secondaryLight">555-555-5555</p>
         </div>
-        <div class="w-full lg:w-1/4 mb-8 lg:mb-0">
+        <div class="flex flex-col items-end w-full lg:w-1/4 mb-8 lg:mb-0">
           <h4 class="text-white font-bold mb-4">Social</h4>
           <ul class="list-none">
-            <li class="mb-2"><a href="#" class="text-secondaryLight hover:text-accent1"><i class="fab fa-facebook-f"></i></a></li>
-            <li class="mb-2"><a href="#" class="text-secondaryLight hover:text-accent1"><i class="fab fa-twitter"></i></a></li>
-            <li class="mb-2"><a href="#" class="text-secondaryLight hover:text-accent1"><i class="fab fa-instagram"></i></a></li>
             <li class="mb-2"><a href="#" class="text-secondaryLight hover:text-accent1"><i class="fab fa-linkedin-in"></i></a></li>
+            <li class="mb-2"><a href="#" class="text-secondaryLight hover:text-accent1"><i class="fab fa-github"></i></a></li>
           </ul>
         </div>
       </div>
       <hr class="border-secondaryLight my-8">
-      <div class="flex justify-between items-center">
-        <p class="text-secondaryLight">© 2023 PixelTek. All rights reserved.</p>
-        <ul class="list-none">
-            <li><a href="#" class="text-secondaryLight hover:text-accent1">Privacy Policy</a></li>
-            <li><a href="#" class="text-secondaryLight hover:text-accent1">Terms of Use</a></li>
-          </ul>
+      <div class="flex flex-col items-center justify-center items-center text-secondaryLight">
+        <p>© 2023 PixelTek</p>
+        <p>A Tbo Company</p>
+        <p>All rights reserved</p>
         </div>
     </div>
 </footer>

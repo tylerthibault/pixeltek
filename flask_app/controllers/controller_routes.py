@@ -9,3 +9,7 @@ def index():
 @app.route("/msg/sent")
 def msg_sent():
     return render_template("/pages/msg_sent.html")
+
+@app.route("/services/<service>")
+def services(service):
+    return render_template("/pages/services.html")
