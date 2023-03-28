@@ -1,5 +1,5 @@
 <section class="flex flex-col items-center justify-center min-h-screen bg-primaryLight dark:bg-primaryDark">
-  <img class="w-4/5 md:w-1/6 animate-in invisible" animation="animate__rotateInDownLeft" src="{{ url_for('static', filename='img/svg/design.svg') }}" alt="">
+  <img class="w-4/5 md:w-1/6 animate-in invisible" animation="animate__rotateInDownLeft" src="{{ url_for('static', filename='img/svg/design.svg', _external=True) }}" alt="">
   <div class="container flex flex-col items-center justify-center text-center">
     <h1 class="text-4xl font-bold text-secondaryLight dark:text-compLight2 mb-4 animate-in invisible"
       animation="animate__zoomInDown">Welcome to {% include 'components/pixeltek.html' %}</h1>

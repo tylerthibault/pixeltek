@@ -24,7 +24,7 @@
 
     {% endblock content %}
 
-    <script src="{{ url_for('static', filename='js/darkmode.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/darkmode.js', _external=True) }}"></script>
     {% block js %}
 
     {% endblock js %}
