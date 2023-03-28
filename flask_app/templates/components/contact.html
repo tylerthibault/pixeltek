@@ -2,7 +2,7 @@
     <div class="container px-4 py-16 mx-auto">
       <h2 class="text-3xl font-bold text-center text-primaryDark dark:text-white mb-8">Contact Us</h2>
       <div class="flex flex-col md:flex-row gap-12">
-        <div class="md:w-2/3">
+        <div class="md:w-2/3 animate-in invisible" animation="animate__rotateInDownLeft">
           <h3 class="text-xl font-bold text-primaryDark dark:text-white mb-4">Get in touch</h3>
           <p class="text-secondaryDark dark:text-primaryDarkText mb-4">Fill out the form below to send us a message.</p>
           <form action="https://formsubmit.io/send/47a85321-0c02-4b2a-86d8-9599870cbd7b" method="post" class="grid grid-cols-1 gap-4">
@@ -24,7 +24,7 @@
             </div>
           </form>
         </div>
-        <div>
+        <div class="animate-in invisible" animation="animate__rotateInDownRight">
           <img src="{{ url_for('static', filename='img/svg/mail_male.svg') }}" alt="email image">
         </div>
       </div>
